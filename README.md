@@ -3,7 +3,7 @@ This is my personal portfolio built using React and styled with Tailwind CSS.
 
 ### At this moment the proyect is not finished yet!
 
-· Live Demo: https://vicenweb.es
+· Portfolio: https://vicenweb.es
 
 ![Image text](https://github.com/Itzvicen/Personal-Portfolio/blob/main/preview.png)
 
