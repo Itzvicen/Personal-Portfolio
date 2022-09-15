@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Inter';
+    font-feature-settings: unset;
+    letter-spacing: -0.01em
+}
+#tech {
+    background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+}
+
+#inicio {
+    background-image: url("../src/assets/img/bbblurry.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contacto {
+    background-image: url("../src/assets/img/fondo3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#trayectoria{
+    background-image: url("./assets/img/bbblurry.svg");
+    background-repeat:repeat;
+    
+}
+
+.color-text {
+    background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.m-top{
+    margin-top: -37rem;
+}
+
+.color-btn {
+    background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+}
+
+.mitad {
+    background-color: #3E82F3;
+}
+.glass {
+    background: rgba(255, 255, 255, 0.195);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.069);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+}
+
+.sombra {
+    -webkit-box-shadow: 5px 4px 25px -11px rgba(10,179,201,1);
+    -moz-box-shadow: 5px 4px 25px -11px rgba(10,179,201,1);
+    box-shadow: 5px 4px 25px -11px rgba(7, 166, 187, 0.565);
+}
+
+
+.gradient-background {
+    background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+    background-size: 240% 240%;
+    animation: gradient-animation 12s ease infinite;
+}
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.glow-on-hover {
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #41ca7a, #40c889, #1abf6c, #05a5b7, #184aad, #1233d8, #1962c7, #6529d4, #6200ff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+#alerta{
+    visibility: hidden;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #050E21;
+    }
+
+    #tech {
+        background: linear-gradient(-70deg, #a2facf 0%, #64acff 100%);
+        clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #inicio {
+        background-image: url(./assets/img/fondo2.svg);
+    }
+
+    #trayectoria {
+        background-image: url("./assets/img/fondot-2.svg");
+        background-repeat: no-repeat;
+    }
+
+    .m-top{
+        margin-top: -23rem;
+    }
+}
